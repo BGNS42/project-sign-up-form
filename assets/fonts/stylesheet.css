@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'SummerFestival';
+    src: url('SummerFestival.woff2') format('woff2'),
+        url('SummerFestival.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Super Festival';
+    src: url('SuperFestival.woff2') format('woff2'),
+        url('SuperFestival.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
