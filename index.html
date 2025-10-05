@@ -8,6 +8,66 @@
     <script src="/src/script.js" defer></script>
 </head>
 <body>
-    <h1>Just the skeleton</h1>
+    <div class="container">
+        <div class="bg-img">
+            <img src="/assets/img/bg-img.jpg" alt="concert background image" width="2054" >
+            <!-- height="2738" -->
+             <div class="black-square">
+                <img src="assets/img/odin-lined.png" alt="odin logo">
+                <h1>ODIN FEST</h1>
+             </div>
+        </div>
+        <div class="form-row">
+            <section class="form-header">
+                <header>
+                    <h3>This is not a real online service! You know you need something like this in your life to hekp you realize your deepest dreams. Sign up <em>now</em> to get started</h3>
+                    <h3>You <em>know</em> you want to.</h3>
+                </header>
+            </section>
+            <section class="form-body">
+                <form action="" method="get">
+                    <div class="inputs">
+                        <p>
+                            <h4>Let's do this!</h4>
+                        </p>
+                        <p>
+                            <label for="first_name">
+                                First name * <input type="text" id="first_name" name="first_name" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label for="last_name">
+                                Last name * <input type="text" name="last_name" id="last_name" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label for="mail">
+                                Email * <input type="email" name="mail" id="mail" required placeholder="your@email.com">
+                            </label>
+                        </p>
+                        <p>
+                            <label for="phone">
+                                Phone number * <input type="tel" name="phone" id="phone" required placeholder="(xx) xxxxx xxxx">
+                            </label>
+                        </p>
+                        <p>
+                            <label for="password">
+                                Password * <input type="password" name="password" id="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,12}$" minlength="8">
+                            </label>
+                        </p>
+                        <p>
+                            <label for="password-confirm">
+                                Confirm Password * <input type="password" name="password-confirm" id="password-confirm" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,12}$" minlength="8">
+                            </label>
+                        </p>
+                    </div>
+                    <div class="button">
+                        <button type="submit">Create Account</button>
+                        <p>Already have an account? <a href="">log in</a></p>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
 </body>
 </html>

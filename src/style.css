@@ -1,3 +1,94 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
 * {
-    color: red;
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* ------------------ reset ^ ----------- */
+
+:root {
+    --valid-confirm-color: green;
+    --invalid-confirm-color: red;
+
+    --border-valid: 1px solid var(--valid-confirm-color);
+    --border-invalid: 1px solid var(--invalid-confirm-color);
+}
+
+div {
+    border: 2px dotted gray;
+}
+
+.container {
+    display: flex;
+}
+
+.bg-img {
+    width: 80vw;
+}
+
+/* input[type="/text|tel|email|password/gim"]:valid {
+    border: 2px solid green;
+} */
+
+input[type="text"]:valid,
+input[type="password"]:valid,
+input[type="email"]:valid,
+input[type="tel"]:valid {
+    border: var(--border-valid);
+}
+
+input[type="text"]:invalid::after,
+input[type="password"]:invalid::after,
+input[type="email"]:invalid::after,
+input[type="tel"]:invalid::after {
+    border: var(--border-invalid);
 }
