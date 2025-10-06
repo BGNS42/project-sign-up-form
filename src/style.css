@@ -78,30 +78,32 @@ h1, h2, h3, h4, h5, h6 {
   --valid-confirm-color: green;
   --invalid-confirm-color: red;
   --light-gray-200: lightgray;
+  --light-gray-100: rgb(241, 241, 241);
   --darker-gray-500: rgb(56, 56, 56);
   
   --button-bg-color:rgb(150, 192, 255);
+  --button-bg-color-darker:rgb(124, 177, 255);
   
   --border-valid: 1px solid var(--valid-confirm-color);
   --border-invalid: 1px solid var(--invalid-confirm-color);
 
-  --paddin-element: min(1rem, 10%);
+  --paddin-element: min(2rem, 10%);
 
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  background: var(--light-gray-100);
 }
 
-div {
-  /* border: 1px dotted gray; */
-}
+/* div {
+  border: 1px dotted gray;
+} */
 
 .container {
   display: flex;
   justify-content: center;
-  margin: 0 min(1rem, 2rem);
 }
 
 .card {
-  /* width: 100%; */
   height: 100vh;
   position: relative;
   background-image: url("/assets/img/bg-img.jpg");
@@ -147,7 +149,7 @@ div {
 .card-footer {
   color: var(--light-gray-200);
   position: absolute;
-  bottom: 0px;
+  bottom: 10px;
   left: 50%;
   transform: translate(-50%); /* centraliza a img com position absolute */
   font-size: clamp(0.5rem, 80%, .7rem);
@@ -175,7 +177,7 @@ input[type="tel"]:invalid::after {
 /* ------------- button design ------------ */
 
 .button {
-  padding: min(50%, 1rem);
+  padding: var(--paddin-element);
 }
 
 .button button {
@@ -184,6 +186,21 @@ input[type="tel"]:invalid::after {
   border: none;
   border-radius: 4px;
   padding: min(50%, 0.5rem) 3rem;
+  margin-bottom: .5rem;
+  box-shadow: -2px 3px 10px rgba(0, 0, 0, 0.205);
+  cursor: pointer;
+  transform: all 250ms ;
+}
+
+.button button:hover {
+  transform: translateY(1px);
+  background-color: var(--button-bg-color-darker);
+}
+
+.button a {
+  color: var(--button-bg-color-darker);
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* ----------------- form-row ------------ */
@@ -194,9 +211,6 @@ input[type="tel"]:invalid::after {
 }
 
 /* ----------------- form-row header ------------ */
-.form-row {
-  margin: 2rem;
-}
 
 .form-row .form-header {
   margin-top: 5rem;
@@ -222,6 +236,8 @@ input[type="tel"]:invalid::after {
   gap: 5px;
   font-size: clamp(0.5rem, 80%, 1rem);
   /* border: 2px solid green; */
+  background: white;
+  box-shadow: -6px 3px 10px rgba(0, 0, 0, 0.205);
 }
 
 .testeCSS p {
