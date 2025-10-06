@@ -60,12 +60,12 @@ cd project-sign-up-form
 Open index.html in your preferred browser
 ```
 
-# 📸 Screenshots
+## 📸 Screenshots
 ![empty form](image-1.png)
 
 ![validated form](image.png)
 
-# 🚧 Challenges & Solutions
+## 🚧 Challenges & Solutions
 
 1. **Visual Form Validation Feedback**
 
@@ -89,7 +89,7 @@ Open index.html in your preferred browser
 Made by [BGNS42](https://github.com/bgns42)
 Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/igor-carrasco) or explore my other projects on GitHub!
 
-# 📸 Image Credit
+## 📸 Image Credit
 
 Photo by [Muneeb Syed](https://unsplash.com/pt-br/@muneebs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/pt-br/fotografias/multidao-e-palco-4_M8uIfPEZw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 
