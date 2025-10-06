@@ -61,9 +61,9 @@ Open index.html in your preferred browser
 ```
 
 ## 📸 Screenshots
-![empty form](image-1.png)
+![empty form](./assets/img/image-1.png)
 
-![validated form](image.png)
+![validated form](./assets/img/image.png)
 
 ## 🚧 Challenges & Solutions
 
