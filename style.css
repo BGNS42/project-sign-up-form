@@ -58,8 +58,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @font-face {
   font-family: 'SummerFestival';
-  src: url('/assets/fonts/SummerFestival.woff2') format('woff2'),
-  url('/assets/fonts/SummerFestival.woff') format('woff');
+  src: url('./assets/fonts/SummerFestival.woff2') format('woff2'),
+  url('./assets/fonts/SummerFestival.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -67,8 +67,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @font-face {
   font-family: 'Super Festival';
-  src: url('/assets/fonts/SuperFestival.woff2') format('woff2'),
-  url('/assets/fonts/SuperFestival.woff') format('woff');
+  src: url('./assets/fonts/SuperFestival.woff2') format('woff2'),
+  url('./assets/fonts/SuperFestival.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 .card {
   height: 100vh;
   position: relative;
-  background-image: url("/assets/img/bg-img.jpg");
+  background-image: url("./assets/img/bg-img.jpg");
   background-position: center;
   background-size: cover;
 }
