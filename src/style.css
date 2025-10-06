@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 div {
-  border: 1px dotted gray;
+  /* border: 1px dotted gray; */
 }
 
 .container {
@@ -101,7 +101,7 @@ div {
 }
 
 .card {
-  width: 100%;
+  /* width: 100%; */
   height: 100vh;
   position: relative;
   background-image: url("/assets/img/bg-img.jpg");
@@ -150,7 +150,7 @@ div {
   bottom: 0px;
   left: 50%;
   transform: translate(-50%); /* centraliza a img com position absolute */
-  font-size: clamp(0.5rem, 80%, 1rem);
+  font-size: clamp(0.5rem, 80%, .7rem);
 }
 
 .card-footer a {
@@ -172,6 +172,8 @@ input[type="tel"]:invalid::after {
   border: var(--border-invalid);
 }
 
+/* ------------- button design ------------ */
+
 .button {
   padding: min(50%, 1rem);
 }
@@ -181,7 +183,7 @@ input[type="tel"]:invalid::after {
   color: var(--darker-gray-500);
   border: none;
   border-radius: 4px;
-  padding: min(50%, 0.5rem);
+  padding: min(50%, 0.5rem) 3rem;
 }
 
 /* ----------------- form-row ------------ */
@@ -191,8 +193,13 @@ input[type="tel"]:invalid::after {
   flex-flow: column wrap;
 }
 
+/* ----------------- form-row header ------------ */
+.form-row {
+  margin: 2rem;
+}
+
 .form-row .form-header {
-  margin: 8rem 2rem 2rem 2rem;
+  margin-top: 5rem;
   padding: var(--paddin-element);
 }
 
@@ -204,13 +211,55 @@ input[type="tel"]:invalid::after {
   width: min(66ch, 50vw);
 }
 
+/* ----------------- form-row form ------------ */
+
 .form-body .inputs {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
+  justify-content: start;
+  align-items: start;
   padding: var(--paddin-element);
-  gap: 10px;
+  gap: 5px;
+  font-size: clamp(0.5rem, 80%, 1rem);
+  /* border: 2px solid green; */
 }
 
-.inputs h3 {
-  margin-right: 40vw;
+.testeCSS p {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.testeCSS {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: min(.5rem, 1rem);
+  align-items: start;
+  width: min(80%, 66ch);
+  /* border: 2px solid blue; */
+}
+
+.testeCSS p label {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* ----------------- form-row input style ------------ */
+input {
+  appearance: none;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+  border: 1px solid var(--light-gray-200);
+  border-radius: 4px;
+  box-shadow: inset 1px 1px 3px #cccccc;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  padding: .2rem;
 }
