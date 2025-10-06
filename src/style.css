@@ -6,6 +6,7 @@
 /* 2. Remove default margin */
 * {
   margin: 0;
+  /* overflow: hidden; */
 }
 
 /* 3. Enable keyword animations */
@@ -47,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*
-  10. Create a root stacking context
+10. Create a root stacking context
 */
 #root, #__next {
   isolation: isolate;
@@ -55,40 +56,127 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ------------------ reset ^ ----------- */
 
-:root {
-    --valid-confirm-color: green;
-    --invalid-confirm-color: red;
+@font-face {
+  font-family: 'SummerFestival';
+  src: url('/assets/fonts/SummerFestival.woff2') format('woff2'),
+  url('/assets/fonts/SummerFestival.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
-    --border-valid: 1px solid var(--valid-confirm-color);
-    --border-invalid: 1px solid var(--invalid-confirm-color);
+@font-face {
+  font-family: 'Super Festival';
+  src: url('/assets/fonts/SuperFestival.woff2') format('woff2'),
+  url('/assets/fonts/SuperFestival.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --valid-confirm-color: green;
+  --invalid-confirm-color: red;
+  --light-gray-200: lightgray;
+  --darker-gray-500: rgb(56, 56, 56);
+  
+  --button-bg-color:rgb(150, 192, 255);
+  
+  --border-valid: 1px solid var(--valid-confirm-color);
+  --border-invalid: 1px solid var(--invalid-confirm-color);
 }
 
 div {
-    border: 2px dotted gray;
+  border: 1px dotted gray;
 }
 
 .container {
-    display: flex;
+  display: flex;
+  justify-content: center;
+  margin: 0 min(0.5rem, 1rem);
 }
 
-.bg-img {
-    width: 80vw;
+.card {
+  width: 40vw;
+  height: 100vh;
+  position: relative;
+  background-image: url("/assets/img/bg-img.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
-/* input[type="/text|tel|email|password/gim"]:valid {
-    border: 2px solid green;
-} */
+.card-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
 
+.card-heading {
+  position: absolute;
+  width: 100%;
+  background-color: black;
+  opacity: 0.6;
+  color: white;
+  top: 8rem;
+  text-align: center;
+  font-size: clamp(0.6rem, 5vw, 1.2rem);
+  font-family: "Super Festival", "SummerFestival";
+  display: flex;
+  align-items: center;
+  padding: min(1rem, 10%);
+}
+
+.card-heading {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  padding: 2rem;
+  /* border: 2px solid purple; */
+}
+
+.card-heading img {
+  width: min(80%, 5vw);
+}
+
+.card-footer {
+  color: var(--light-gray-200);
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: clamp(0.5rem, 80%, 1rem);
+}
+
+.card-footer a {
+  color: white;
+}
+
+/* ------- css color validation --------------- */
 input[type="text"]:valid,
 input[type="password"]:valid,
 input[type="email"]:valid,
 input[type="tel"]:valid {
-    border: var(--border-valid);
+  border: var(--border-valid);
 }
 
 input[type="text"]:invalid::after,
-input[type="password"]:invalid::after,
+input[type="password"]:invalid,
 input[type="email"]:invalid::after,
 input[type="tel"]:invalid::after {
-    border: var(--border-invalid);
+  border: var(--border-invalid);
+}
+
+.button {
+  padding: min(50%, 1rem);
+}
+
+.button button {
+  background-color: var(--button-bg-color);
+  color: var(--darker-gray-500);
+  border: none;
+  border-radius: 4px;
+  padding: min(50%, 0.5rem);
 }
