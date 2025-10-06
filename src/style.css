@@ -263,3 +263,27 @@ input[type="tel"] {
 input::placeholder {
   padding: .2rem;
 }
+
+input + span {
+  position: relative;
+}
+
+input + span::before {
+  position: absolute;
+  right: -20px;
+  top: -20px;
+}
+
+input:invalid::after {
+  border: 2px solid red;
+}
+
+input:invalid + span::before {
+  content: "✖";
+  color: red;
+}
+
+input:valid + span::before {
+  content: "✓";
+  color: green;
+}
